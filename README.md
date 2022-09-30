@@ -5,6 +5,8 @@ A writeup of the TryHackMe CTF challenge 'GamingServer'
 Here is a lnk to the room: [GamingServer](https://tryhackme.com/room/gamingserver)
 
 #Initial Enumeration
+
+
 Starting with a nmap scan I found the services being run on the machine.
 nmap syntax: "nmap -T4 -sV -v $IP"
 
@@ -12,9 +14,12 @@ After the scan has completed we see that two ports (22, 80) are open.
 <img width="504" alt="image" src="https://user-images.githubusercontent.com/66540055/193349717-d6b30c25-c18a-4bbc-a82b-cd6a796aac38.png">
 
 
+
 #Web Enumeration 
 Opening the webpage I saw a really cool webpage with some "Lorem ipsum" aka filler text. Checking the page source I saw found a potential username!
 <img width="797" alt="image" src="https://user-images.githubusercontent.com/66540055/193353371-6b8253c8-b36f-4104-9cff-cf30a16675bd.png">
+
+
 
 After going through all the links available, I began to further enumerate the webserver by using the tool Gobuster:
 Gobuster syntax: "gobuster dir -u http://$IP -w /usr/share/wordlists/rockyou.txt"
@@ -26,8 +31,12 @@ After the scan has completed we find the following directories: robots.txt, secr
 Checking out the secret page I found a file named secretKey
 <img width="280" alt="image" src="https://user-images.githubusercontent.com/66540055/193351053-a570acfb-f132-4d88-8495-f517ad22812e.png">
 
+
+
 Opening the file we see that it is an id_rsa file:
 <img width="263" alt="image" src="https://user-images.githubusercontent.com/66540055/193351171-53dc440c-a846-494c-abaf-0d31be496198.png">
+
+
 
 Using curl I downloaded the file.
 Curl syntax: "curl -L http://10.10.107.61/secret/secretKey > id_rsa"
@@ -44,6 +53,8 @@ john syntax: "john id_rsa.hash dict.list"
 After john has run I see that the password for the id_rsa file is "<redacted>"
 <img width="319" alt="image" src="https://user-images.githubusercontent.com/66540055/193352934-2b4ba42c-8dc5-4703-b154-79d6fe0637f5.png">
 
+  
+  
   
 #Initial Access
 
