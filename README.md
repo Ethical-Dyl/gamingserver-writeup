@@ -56,7 +56,7 @@ After using exiftool and binwalk I see no stent in the meme picture, so I got do
 ssh2john syntax: "ssh2john id_rsa > id_rsa.hash"
 john syntax: "john id_rsa.hash dict.list"
 
-After john has run I see that the password for the id_rsa file is "<redacted>"
+After john has run I see that the password for the private key "<redacted>"
   
 <img width="319" alt="image" src="https://user-images.githubusercontent.com/66540055/193352934-2b4ba42c-8dc5-4703-b154-79d6fe0637f5.png">
 
@@ -65,8 +65,8 @@ After john has run I see that the password for the id_rsa file is "<redacted>"
   
 # Initial Access
 
-Before using the id_rsa file I must change the permissions, otherwise it will not be accepted, "chmod 600 id_rsa"
-Using the id_rsa file and the newly found password I ssh'd into the machine using the username found from the webserver's landing page:
+Before using the private key I must change the permissions, otherwise it will not be accepted, "chmod 600 id_rsa"
+Using the private key nd the newly found password I ssh'd into the machine using the username found from the webserver's landing page:
   
 <img width="421" alt="image" src="https://user-images.githubusercontent.com/66540055/193353943-d3cb6cc7-8c5c-44b5-a855-479e5145146c.png">
  
