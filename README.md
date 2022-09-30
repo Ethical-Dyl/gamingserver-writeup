@@ -2,7 +2,7 @@
 A writeup of the TryHackMe CTF challenge 'GamingServer'
 
 
-Here is a lnk to the room: [GamingServer](https://tryhackme.com/room/gamingserver)
+Here is a link to the room: [GamingServer](https://tryhackme.com/room/gamingserver)
 
 # Initial Enumeration
 
