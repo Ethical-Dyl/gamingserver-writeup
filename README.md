@@ -47,11 +47,11 @@ Opening the file we see that it is an id_rsa file:
 Using curl I downloaded the file.
 Curl syntax: "curl -L http://10.10.107.61/secret/secretKey > id_rsa"
 
-Before cracking the id_rsa file I went back to check the other webpage found in enumeration, uploads.
+Before cracking the private key I went back to check the other webpage found in enumeration, uploads.
 Opening the webpage I see that we have a dictonary file, a manifesto text file as well as a meme picture.
 Using curl I downloaded the dictionary file into my working directory, I also saved the meme picture incase there is a bit of stentonagrophy in this challenge.
 
-After using exiftool and binwalk I see no stent in the meme picture, so I got down to cracking the id_rsa file using ssh2john & john. I used the downloaded dictonary file to bruteforce the hashfile.
+After using exiftool and binwalk I see no stent in the meme picture, so I got down to cracking the private key using ssh2john & john. I used the downloaded dictonary file to bruteforce the hashfile.
 
 ssh2john syntax: "ssh2john id_rsa > id_rsa.hash"
 john syntax: "john id_rsa.hash dict.list"
