@@ -38,7 +38,7 @@ Checking out the secret page I found a file named secretKey
 
 
 
-Opening the file we see that it is an id_rsa file:
+Opening the file we see that it is an private key:
 
 <img width="263" alt="image" src="https://user-images.githubusercontent.com/66540055/193351171-53dc440c-a846-494c-abaf-0d31be496198.png">
 
@@ -66,7 +66,7 @@ After john has run I see that the password for the private key "<redacted>"
 # Initial Access
 
 Before using the private key I must change the permissions, otherwise it will not be accepted, "chmod 600 id_rsa"
-Using the private key nd the newly found password I ssh'd into the machine using the username found from the webserver's landing page:
+Using the private key and the newly found password I ssh'd into the machine using the username found from the webserver's landing page:
   
 <img width="421" alt="image" src="https://user-images.githubusercontent.com/66540055/193353943-d3cb6cc7-8c5c-44b5-a855-479e5145146c.png">
  
