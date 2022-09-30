@@ -83,7 +83,7 @@ Nothing much, next I uploaded linpeas to do all the heavy lifting for me using w
   
 <img width="952" alt="image" src="https://user-images.githubusercontent.com/66540055/193355463-8d1be9b1-41fa-4e5e-af92-631c8b5109ea.png">
 
-After making the script exacutable and running it I saw that this machine is vulnerableto CVE-2021-4034:
+After making the script executable and running it I saw that this machine is vulnerableto CVE-2021-4034:
   
 <img width="342" alt="image" src="https://user-images.githubusercontent.com/66540055/193355704-c8827cc2-a689-4c9e-b1b5-89c5cccfd5d7.png">
   
