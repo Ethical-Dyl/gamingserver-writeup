@@ -38,7 +38,7 @@ Checking out the secret page I found a file named secretKey
 
 
 
-Opening the file we see that it is an private key:
+Opening the file we see that it is a private key:
 
 <img width="263" alt="image" src="https://user-images.githubusercontent.com/66540055/193351171-53dc440c-a846-494c-abaf-0d31be496198.png">
 
